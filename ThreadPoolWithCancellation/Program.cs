@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-var threadPool = new MyThreadPool();
+﻿var threadPool = new MyThreadPool();
 
 using var cts = new CancellationTokenSource();
 
@@ -21,7 +19,7 @@ void ExecuteMethod1(CancellationToken cancellationToken)
     for (var i = 0; i < 5; i++)
     {
         cancellationToken.ThrowIfCancellationRequested();
-        Thread.Sleep(100);        
+        Thread.Sleep(100);
     }
 }
 
